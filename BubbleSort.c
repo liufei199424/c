@@ -14,7 +14,7 @@ void swap (SqList *L, int i, int j) {
 	int temp = L->r[i];
 	L->r[i] = L->r[j];
 	L->r[j] = temp;
-} 
+}
 
 /*
 冒泡排序初级版
@@ -30,7 +30,7 @@ int BubbleSort_one (SqList *L) {
 			}
 		}
 	}
-	
+
 	return count;
 }
 
@@ -48,9 +48,9 @@ int BubbleSort_two (SqList *L) {
 			}
 		}
 	}
-	
+
 	return count;
-} 
+}
 
 /*
 冒泡排序高级版
@@ -69,7 +69,7 @@ int BubbleSort_three (SqList *L) {
 			}
 		}
 	}
-	
+
 	return count;
 }
 
@@ -89,23 +89,22 @@ int main () {
 	SqList L1 = {{0,1,3,4,2,5,6,7,8,9}, 10};
 	SqList L2 = {{0,1,3,4,2,5,6,7,8,9}, 10};
 	SqList L3 = {{0,1,3,4,2,5,6,7,8,9}, 10};
-	
+
 	// 初级冒泡
 	showList(&L1);
 	int count = BubbleSort_one(&L1);
 	showList(&L1);
 	printf("count:%d\n\n", count);
-	
+
 	// 中级冒泡
 	showList(&L2);
 	count = BubbleSort_two(&L2);
 	showList(&L2);
 	printf("count:%d\n\n", count);
-	
+
 	// 高级冒泡
 	showList(&L3);
 	count = BubbleSort_three(&L3);
 	showList(&L3);
 	printf("count:%d\n\n", count);
 }
-	
